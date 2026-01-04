@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import cartContext from "../Context/CartContext";
+import { cartContext } from "../Context/CartContext";
 import data from "../data";
 
 function ItemCard(props) {
