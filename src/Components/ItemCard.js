@@ -1,24 +1,8 @@
 import { useValue } from "../Context/CartContext";
-import data from "../data";
 
 function ItemCard(props) {
   const { id, name, price, qty } = props;
-  const { total, setTotal, setItem } = useValue();
-
-  function handleAdd(i) {
-    const item = data.find((item) => item.id === i);
-    setTotal((prev) => prev + item.price);
-    setItem((prev) => prev + 1);
-  }
-
-  function handleRemove(i) {
-    const item = data.find((item) => item.id === i);
-    if (total <= 0) {
-      return;
-    }
-    setTotal((prev) => prev - item.price);
-    setItem((prev) => prev - 1);
-  }
+  const { handleAdd, handleRemove } = useValue();
 
   return (
     <div className="item-card">
