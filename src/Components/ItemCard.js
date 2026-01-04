@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { cartContext } from "../Context/CartContext";
+import { useValue } from "../Context/CartContext";
 import data from "../data";
 
 function ItemCard(props) {
   const { id, name, price, qty } = props;
-  const { total, setTotal, setItem } = useContext(cartContext);
+  const { total, setTotal, setItem } = useValue();
 
   function handleAdd(i) {
     const item = data.find((item) => item.id === i);

@@ -1,6 +1,11 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-export const cartContext = createContext();
+const cartContext = createContext();
+
+export function useValue() {
+  const value = useContext(cartContext);
+  return value;
+}
 
 function CustomCartProvider({ children }) {
   const [total, setTotal] = useState(0);
