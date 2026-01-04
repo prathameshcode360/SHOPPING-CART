@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import cartContext from "../Context/CartContext";
+
 function Navbar() {
+  const { total, item } = useContext(cartContext);
   return (
     <div className="navbar">
       <div className="left">
@@ -9,8 +13,8 @@ function Navbar() {
         />
       </div>
       <div className="right">
-        <div className="cart-items">cart-items:5</div>
-        <div className="Total-price">Total:800</div>
+        <div className="cart-items">cart-items:{item}</div>
+        <div className="Total-price">Total:{total}</div>
       </div>
     </div>
   );
