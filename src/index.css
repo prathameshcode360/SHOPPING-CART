@@ -1,3 +1,144 @@
-.App{
-  text-align: center;
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #1e293b;
+  color: #fff;
+}
+
+.navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .left img {
+  width: 35px;
+}
+
+.navbar .right {
+  display: flex;
+  gap: 25px;
+  font-size: 16px;
+}
+
+.cart-items,
+.Total-price {
+  background-color: #334155;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* ================= ITEMS GRID ================= */
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+/* ================= ITEM CARD ================= */
+
+.item-card {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.item-card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.item-card p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+/* ===== Quantity Badge (Top Right Circle) ===== */
+
+.item-card span {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #0ea5e9;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ================= BUTTONS ================= */
+
+.item-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.item-card button:first-of-type {
+  background-color: #22c55e;
+  color: white;
+}
+
+.item-card button:last-of-type {
+  background-color: #ef4444;
+  color: white;
+}
+
+.item-card button:hover {
+  opacity: 0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar .right {
+    gap: 15px;
+  }
+
+  .items {
+    padding: 20px;
+  }
 }

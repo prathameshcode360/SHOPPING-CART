@@ -1,7 +1,11 @@
+import Items from "./Components/Items";
+import Navbar from "./Components/Navbar";
+
 function App() {
   return (
     <div className="App">
-      <h1>Shopie</h1>
+      <Navbar />
+      <Items />
     </div>
   );
 }
