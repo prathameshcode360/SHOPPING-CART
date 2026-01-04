@@ -27,8 +27,14 @@ function CustomCartProvider({ children }) {
     setItem((prev) => prev - 1);
   }
 
+  function handleReset() {
+    setTotal(0);
+    setItem(0);
+  }
+
   return (
-    <cartContext.Provider value={{ total, item, handleAdd, handleRemove }}>
+    <cartContext.Provider
+      value={{ total, item, handleAdd, handleRemove, handleReset }}>
       {children}
     </cartContext.Provider>
   );

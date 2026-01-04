@@ -1,7 +1,7 @@
 import { useValue } from "../Context/CartContext";
 
 function Navbar() {
-  const { total, item } = useValue();
+  const { total, item, handleReset } = useValue();
   return (
     <div className="navbar">
       <div className="left">
@@ -14,6 +14,9 @@ function Navbar() {
       <div className="right">
         <div className="cart-items">cart-items {item}</div>
         <div className="Total-price">Total {total}</div>
+        <div>
+          <button onClick={handleReset}>Reset</button>
+        </div>
       </div>
     </div>
   );
