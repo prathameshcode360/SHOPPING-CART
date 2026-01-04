@@ -142,3 +142,90 @@ body {
     padding: 20px;
   }
 }
+/* ================= CART MODAL ================= */
+
+.cart {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  max-height: 80vh;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* ================= TOP BUTTONS ================= */
+
+.corner-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.corner-buttons button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.corner-buttons .left button {
+  background-color: #ef4444;
+  color: white;
+}
+
+.corner-buttons .right button {
+  background-color: #64748b;
+  color: white;
+}
+
+.corner-buttons button:hover {
+  opacity: 0.9;
+}
+
+/* ================= CART ITEMS ================= */
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Example item style (future use) */
+.cart-items div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+  .cart {
+    width: 90%;
+  }
+}
