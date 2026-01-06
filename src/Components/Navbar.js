@@ -12,8 +12,8 @@ function Navbar() {
         />
       </div>
       <div className="right">
-        <div className="cart-items">cart-items {item}</div>
-        <div className="Total-price">Total {total}</div>
+        <div className="total-items">cart-items {item}</div>
+        <div className="total-price">Total {total}</div>
         <div>
           <button onClick={toggle}>Cart</button>
         </div>
